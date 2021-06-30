@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/assets/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/loader.css">
+    <link rel="stylesheet" href="/static/styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <title>Youtube Video Downloader</title>
+  </head>
+  <body>
+    <input id="loader" type="checkbox">
+    <div class="load">
+      <div class="loader">Downloading</div>
+    </div>
+    <div class="downloadInfo">
+      <p class="header">Download Video</p>
+      <hr>
+      <p class="inputLabel">Enter Youtube URL</p><span class="urlInput" contenteditable id="youtubeVideoURL"></span>
+      <button class="downloadButton" id="downloadVideo">Click to download!</button>
+    </div>
+    <div class="downloadInfo">
+      <p class="header">Download Song</p>
+      <hr>
+      <p class="inputLabel">Enter Youtube URL</p><span class="urlInput" contenteditable id="youtubeSongURL"></span>
+      <button class="downloadButton" id="downloadSong">Click to download!</button>
+    </div>
+    <div id="downloadDone">
+      <p id="doneHeader"></p>
+      <hr>
+      <p id="doneDescription"></p>
+    </div>
+    <script src="/eel.js"> </script>
+    <script src="/static/js/index.js"></script>
+  </body>
+</html>

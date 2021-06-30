@@ -1,0 +1,137 @@
+* {
+    margin:0;
+    padding:0;
+    
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("../assets/background.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#loader {
+    display: none;
+}
+
+#loader:checked ~ .load{
+    display: block;
+}
+
+.load {
+    display: none;
+
+    z-index: 100;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+
+    background-color: rgba(0, 0, 0, 0.651);
+}
+
+.downloadInfo {
+    background-color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    max-width: 600px;
+
+    p.header {
+        font-size: 16px;
+        color: gray;
+
+        ~hr {
+            margin: 3px 0px 5px 0px; 
+            max-width: 200px;
+        }
+    }
+
+    p.inputLabel {
+        font-size: 14px;
+        color: gray;
+    }
+
+    
+    .urlInput {
+        display: flex;
+        word-break: break-all;
+
+        outline: none;
+        font-size: 14px;
+        margin-top: 4px;
+
+        border: 2px solid limegreen;
+
+        border-radius: 5px;
+        padding: 5px;
+
+        transition: border .3s ease;
+
+        cursor: text;
+
+        &:empty {
+            border-color: red;
+        }
+    }
+
+    .downloadButton {
+        margin-top: 5px;
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+
+        border: none;
+        outline: none;
+        color: white;
+        
+        border-radius: 5px;
+        background-color: rgb(102, 102, 255);
+
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: rgb(62, 62, 189);
+        }
+    }
+
+}
+
+#downloadDone {
+    display: none;
+
+    background-color: white;
+
+    color: white;
+
+    position: absolute;
+
+    //right: 10px;
+    right: -1000px;
+
+    padding: 5px 20px 5px 5px;
+    bottom: 10px;
+
+    border-radius: 5px;
+
+    max-width: 250px;
+
+    p#header {
+        font-weight: bold;
+        font-size: 18px;
+        
+        ~hr {
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+    }
+
+    transition: .5s ease-in-out;
+
+}
